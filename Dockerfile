@@ -8,6 +8,8 @@ COPY . .
 
 RUN go mod tidy
 
-RUN go build -o ./bin/cmd/auth
+RUN go build -o ./bin/cmd/auth ./cmd/auth
+
+EXPOSE 8080
 
 ENTRYPOINT ["./bin/cmd/auth"]
